@@ -8,3 +8,6 @@ pubspec.lock
 build/
 
 bin/
+
+flutter.jar
+android/.idea/caches/*

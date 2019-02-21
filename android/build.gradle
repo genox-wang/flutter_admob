@@ -1,6 +1,5 @@
 group 'com.admob.flutteradmob'
 version '1.0-SNAPSHOT'
-
 buildscript {
     repositories {
         google()
@@ -9,19 +8,15 @@ buildscript {
 
     dependencies {
         classpath 'com.android.tools.build:gradle:3.2.1'
-        classpath 'com.google.android.gms:play-services-ads:17.1.1'
     }
 }
-
 rootProject.allprojects {
     repositories {
         google()
         jcenter()
     }
 }
-
 apply plugin: 'com.android.library'
-
 android {
     compileSdkVersion 27
 
@@ -32,4 +27,11 @@ android {
     lintOptions {
         disable 'InvalidPackage'
     }
+    dependencies {
+        api 'com.google.android.gms:play-services-ads:17.1.1'
+    }
+}
+
+dependencies {
+    compileOnly files('lib/flutter.jar')
 }

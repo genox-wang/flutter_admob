@@ -1,8 +1,8 @@
 name: flutter_admob
 description: A new flutter plugin project.
-version: 0.0.1
-author:
-homepage:
+version: 0.0.3
+author: wangji <genius840215@163.com>
+homepage: https://github.com/wilfordw/flutter_admob
 
 environment:
   sdk: ">=2.0.0-dev.68.0 <3.0.0"

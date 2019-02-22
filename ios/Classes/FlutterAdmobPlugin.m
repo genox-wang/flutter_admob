@@ -150,9 +150,13 @@
     UILayoutGuide *guide = screen.safeAreaLayoutGuide;
     [NSLayoutConstraint activateConstraints:@[
       [bannerView.centerXAnchor constraintEqualToAnchor:guide.centerXAnchor],
-      [bannerView.bottomAnchor
-        constraintEqualToAnchor: gravity == 0 ? guide.topAnchor : guide.bottomAnchor
-          constant:gravity == 0 ? offset : -offset]
+      gravity == 0 
+      ? [bannerView.topAnchor
+        constraintEqualToAnchor: guide.topAnchor
+        constant: offset]
+      : [bannerView.bottomAnchor
+        constraintEqualToAnchor: guide.bottomAnchor
+          constant:offset]
     ]];
   } else {
     [self placeBannerPreIos11 : bannerView gravity: gravity offset: offset];
